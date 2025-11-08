@@ -1,0 +1,6 @@
+services:
+  - type: web
+    name: mr2-studio-cursos
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn app:app

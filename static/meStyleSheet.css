@@ -1,0 +1,163 @@
+body 
+    {
+      background-color: #0a0a0a;
+      color: #e5e5e5;
+      font-family: 'Poppins', sans-serif;
+    }
+
+nav.navbar 
+    {
+      background-color: transparent;
+      padding: 1rem 2rem;
+    }
+
+.navbar-brand 
+    {
+      color: #00ff9d;
+      font-weight: bold;
+      font-size: 1.5rem;
+    }
+.navbar-brand span 
+    {
+      color: #00ff9d;
+    }
+
+.navbar-nav .nav-link 
+    {
+      color: #cfcfcf;
+      margin-left: 1.2rem;
+    }
+
+.navbar-nav .nav-link:hover 
+    {
+      color: #00ff9d;
+    }
+    
+.hero 
+    {
+      text-align: left;
+      padding: 5rem 2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+    }
+    
+.hero h1 
+    {
+      font-size: 3rem;
+      font-weight: bold;
+      color: #fff;
+    }
+    
+.hero-buttons .btn 
+    {
+      margin-right: 1rem;
+      margin-top: 1rem;
+      border-radius: 30px;
+      font-weight: 500;
+      padding: 0.6rem 1.5rem;
+    }
+    
+.btn-green 
+    {
+      border: 1px solid #00ff9d;
+      color: #00ff9d;
+      background: transparent;
+    }
+    
+.btn-green:hover 
+    {
+      background-color: #00ff9d;
+      color: #000;
+    }
+    
+.btn-purple 
+    {
+      border: 1px solid #8b5cf6;
+      color: #8b5cf6;
+      background: transparent;
+    }
+    
+.btn-purple:hover 
+    {
+      background-color: #8b5cf6;
+      color: #fff;
+    }
+    
+.courses 
+    {
+      padding: 3rem 2rem;
+    }
+    
+.course-card 
+    {
+      background-color: #111;
+      border: 1px solid #00ff9d20;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 0 10px #00ff9d20;
+      transition: all 0.3s;
+    }
+    
+.course-card:hover 
+    {
+      box-shadow: 0 0 20px #00ff9d60;
+      transform: translateY(-5px);
+    }
+    
+.course-card img 
+    {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+    
+    
+.course-card .card-body 
+    {
+      padding: 1.5rem;
+    }
+    
+.course-card .price 
+    {
+      color: #00ff9d;
+      font-weight: bold;
+    }
+    
+.course-card .free 
+    {
+      color: #00ff9d;
+      font-weight: bold;
+    }
+    
+.section-title 
+    {
+      font-size: 2rem;
+      font-weight: 600;
+      margin-bottom: 2rem;
+    }
+    
+.features 
+    {
+      padding: 4rem 2rem;
+    }
+    
+.features .icon 
+    {
+      font-size: 3rem;
+      color: #00ff9d;
+      margin-bottom: 1rem;
+    }
+    
+.neon-border 
+    {
+      text-shadow: 0 0 10px #00ff9d, 0 0 20px #00ff9d;
+    }
+    
+.navbar-nav .nav-link.active 
+    {
+      color: #00d9ff;
+      font-weight: bold;
+      text-shadow: 0 0 10px #00ff9db4, 0 0 20px #00ff9d;
+    }
