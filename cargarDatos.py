@@ -1,10 +1,15 @@
 import requests
 import json
+import hashlib
 
 POST_URL = "https://script.google.com/macros/s/AKfycbyKy9YsgiJ30RvukIgXC0TVGzvuRWLSQIm7JcTP3DcMwZMmFZl7LJvptB3ikW_7Jnsw/exec"
 GET_URL = "https://script.google.com/macros/s/AKfycby7XInLIDjMgH__JjDHwXp4lGrSjL8pN6MisWAYZl2yTC-tK-BWNoRoE6FmXuw-jpDz/exec"
 
+def hash_password(password):
+    return hashlib.sha256(password.encode()).hexdigest()
+
 def guardar_usuario(nombre, email, password):
+    password = hash_password(password)
     data = {
         "nombre": nombre,
         "email": email, 
@@ -14,4 +19,5 @@ def guardar_usuario(nombre, email, password):
 
 def obtener_usuarios():
     response = requests.get(GET_URL)
+
     return json.loads(response.text)
