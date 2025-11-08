@@ -1,6 +1,6 @@
 from flask import Flask, render_template, request, redirect, session
 from datetime import *
-from cargarDatos import guardar_usuario, obtener_usuarios
+from cargarDatos import guardar_usuario, obtener_usuarios, hash_password
 
 app = Flask("app.py")
 app.secret_key = "K5XEUwU"      
@@ -40,6 +40,7 @@ def logged():
     #Obtener datos y comparar para dar acceso.    
     if name and password:
         users_in_db = obtener_usuarios()
+        password = hash_password(password)
         for i in users_in_db:
             if name == i['nombre']:
                 if password == i['password']:
@@ -63,5 +64,6 @@ def dashboard():
 def logout():
     session.clear()
     return redirect("/")
+
 
 app.run(host='0.0.0.0', port=5000, debug=False)
